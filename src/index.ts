@@ -9,6 +9,8 @@ import { statusReportLifeSupport } from "./3/3-2";
 import { bingo } from "./4/4";
 import { hydrothermalVents } from "./5/5";
 import { lanternFishes } from "./6/6";
+import { sortCrabs } from "./7/7-1";
+import { sortCrabsNonLinear } from "./7/7-2";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -28,4 +30,6 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(statusReportLifeSupport, "inputs/3-1.txt");
 //execute(bingo, "inputs/4.txt");
 //execute(hydrothermalVents, "inputs/5.txt");
-execute(lanternFishes, "inputs/6.txt");
+//execute(lanternFishes, "inputs/6.txt");
+//execute(sortCrabs, "inputs/7.txt");
+//execute(sortCrabsNonLinear, "inputs/7.txt");
