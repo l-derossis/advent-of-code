@@ -16,6 +16,7 @@ import { digitalSegmentsFull } from "./2021/8/8-2";
 import { lavaTubes } from "./2021/9/9";
 import { syntaxScoring } from "./2021/10/10";
 import { dumboOctopus } from "./2021/11/11";
+import { notQuiteLisp } from "./2015/1/1";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -27,20 +28,24 @@ function execute(func: (arg: string) => void, inputFile: string) {
   });
 }
 
+// 2015
+
+execute(notQuiteLisp, "inputs/2015/1.txt");
+
 // 2021
-execute(depthIncrease, "inputs/2021/1.txt");
-execute(depthIncreaseSlidingWindow, "inputs/2021/1.txt");
-execute(submarinePosition, "inputs/2021/2.txt");
-execute(submarinePositionWithAim, "inputs/2021/2.txt");
-execute(statusReportPowerConsumption, "inputs/2021/3.txt");
-execute(statusReportLifeSupport, "inputs/2021/3.txt");
-execute(bingo, "inputs/2021/4.txt");
-execute(hydrothermalVents, "inputs/2021/5.txt");
-execute(lanternFishes, "inputs/2021/6.txt");
-execute(sortCrabs, "inputs/2021/7.txt");
-execute(sortCrabsNonLinear, "inputs/2021/7.txt");
-execute(digitalSegments, "inputs/2021/8.txt");
-execute(digitalSegmentsFull, "inputs/2021/8.txt");
-execute(lavaTubes, "inputs/2021/9.txt");
-execute(syntaxScoring, "inputs/2021/10.txt");
-execute(dumboOctopus, "inputs/2021/11.txt");
+//execute(depthIncrease, "inputs/2021/1.txt");
+//execute(depthIncreaseSlidingWindow, "inputs/2021/1.txt");
+//execute(submarinePosition, "inputs/2021/2.txt");
+//execute(submarinePositionWithAim, "inputs/2021/2.txt");
+//execute(statusReportPowerConsumption, "inputs/2021/3.txt");
+//execute(statusReportLifeSupport, "inputs/2021/3.txt");
+//execute(bingo, "inputs/2021/4.txt");
+//execute(hydrothermalVents, "inputs/2021/5.txt");
+//execute(lanternFishes, "inputs/2021/6.txt");
+//execute(sortCrabs, "inputs/2021/7.txt");
+//execute(sortCrabsNonLinear, "inputs/2021/7.txt");
+//execute(digitalSegments, "inputs/2021/8.txt");
+//execute(digitalSegmentsFull, "inputs/2021/8.txt");
+//execute(lavaTubes, "inputs/2021/9.txt");
+//execute(syntaxScoring, "inputs/2021/10.txt");
+//execute(dumboOctopus, "inputs/2021/11.txt");
