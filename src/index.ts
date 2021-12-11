@@ -15,6 +15,7 @@ import { digitalSegments } from "./8/8-1";
 import { digitalSegmentsFull } from "./8/8-2";
 import { lavaTubes } from "./9/9";
 import { syntaxScoring } from "./10/10";
+import { dumboOctopus } from "./11/11";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -40,4 +41,5 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(digitalSegments, "inputs/8.txt");
 //execute(digitalSegmentsFull, "inputs/8.txt");
 //execute(lavaTubes, "inputs/9.txt");
-execute(syntaxScoring, "inputs/10.txt");
+//execute(syntaxScoring, "inputs/10.txt");
+execute(dumboOctopus, "inputs/11.txt");
