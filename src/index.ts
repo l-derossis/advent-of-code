@@ -13,6 +13,7 @@ import { sortCrabs } from "./7/7-1";
 import { sortCrabsNonLinear } from "./7/7-2";
 import { digitalSegments } from "./8/8-1";
 import { digitalSegmentsFull } from "./8/8-2";
+import { lavaTubes } from "./9/9";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -36,4 +37,5 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(sortCrabs, "inputs/7.txt");
 //execute(sortCrabsNonLinear, "inputs/7.txt");
 //execute(digitalSegments, "inputs/8.txt");
-execute(digitalSegmentsFull, "inputs/8.txt");
+//execute(digitalSegmentsFull, "inputs/8.txt");
+execute(lavaTubes, "inputs/9.txt");
