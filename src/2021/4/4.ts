@@ -29,7 +29,7 @@ class Board {
       unmarked.push(...r.filter((value) => !inputs.includes(value)));
     });
 
-    var sum = unmarked.reduce((previous, value) => previous + value);
+    const sum = unmarked.reduce((previous, value) => previous + value);
     return sum * inputs[inputs.length - 1];
   }
 
@@ -118,7 +118,7 @@ function findLastWinningBoard(
   input.forEach((i) => {
     inputsBeingCheckedForAWin.push(i);
 
-    let winningThisRound = boardsLocal.filter((b) =>
+    const winningThisRound = boardsLocal.filter((b) =>
       b.isWinning(inputsUsedInAWin.concat(inputsBeingCheckedForAWin))
     );
 

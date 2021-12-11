@@ -4,14 +4,14 @@ type Accumulator = {
 };
 
 export function depthIncrease(data: string) {
-  let reducer = (previous: Accumulator, current: number) => {
+  const reducer = (previous: Accumulator, current: number) => {
     return {
       previous: current,
       acc: previous.acc + (current > previous.previous ? 1 : 0),
     };
   };
 
-  let count = data
+  const count = data
     .split("\n")
     .map((v) => +v)
     .reduce(reducer, { previous: Number.MAX_VALUE, acc: 0 });

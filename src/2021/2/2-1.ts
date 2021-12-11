@@ -22,7 +22,7 @@ export function submarinePosition(data: string) {
   console.log(`[2021, 2-1] Product: ${result.horizontal * result.vertical}`);
 }
 
-let parseCommand = (line: string): Command => {
+const parseCommand = (line: string): Command => {
   const mapper: { [input: string]: Direction } = {
     forward: Direction.Forward,
     up: Direction.Up,
@@ -37,7 +37,7 @@ let parseCommand = (line: string): Command => {
   };
 };
 
-let move = (position: Position, command: Command): Position => {
+const move = (position: Position, command: Command): Position => {
   switch (command.direction) {
     case Direction.Forward:
       return { ...position, horizontal: position.horizontal + command.units };

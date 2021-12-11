@@ -23,7 +23,7 @@ function readLifeReportValue(data: string, value: "oxygen" | "co2"): number {
   return parseInt(acc.values[0], 2);
 }
 
-let reducer = (accumulator: GlobalAccumulator): GlobalAccumulator => {
+const reducer = (accumulator: GlobalAccumulator): GlobalAccumulator => {
   const mfb = getMostFrequentBit(
     accumulator.values,
     accumulator.i,
@@ -58,12 +58,12 @@ function getMostFrequentBit(
 ): string {
   const acc = buildMfbAccumulator(values[0].length);
   values.reduce(mfbReducer, acc);
-  return compare(acc.at(position)!, values.length / 2) ? "1" : "0";
+  return compare(acc.at(position) ?? 0, values.length / 2) ? "1" : "0";
 }
 
 type MfbAccumulator = number[];
 
-let mfbReducer = (
+const mfbReducer = (
   accumulator: MfbAccumulator,
   line: string
 ): MfbAccumulator => {
@@ -80,7 +80,7 @@ let mfbReducer = (
 };
 
 function buildMfbAccumulator(arrayLength: number): MfbAccumulator {
-  let acc: MfbAccumulator = new Array<number>(arrayLength);
+  const acc: MfbAccumulator = new Array<number>(arrayLength);
   for (let i = 0; i < acc.length; ++i) acc[i] = 0;
   return acc;
 }

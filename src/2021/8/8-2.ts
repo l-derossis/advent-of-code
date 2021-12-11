@@ -2,7 +2,7 @@ export function digitalSegmentsFull(data: string) {
   const lines = data.split("\n");
 
   const sum = lines.reduce((p, c) => {
-    let slices = c.split(" | ");
+    const slices = c.split(" | ");
     const digits = slices[1].split(" ");
     const signalSolver = new SignalsSolver();
     signalSolver.solveSignals(slices[0].split(" "));
@@ -158,7 +158,7 @@ class SignalsSolver {
     const sameSize = signals.length == segments.length;
     const signalsMatch = () => {
       const signalsCopy = [...signals];
-      let digitPossibilities = this.possibilities.filter((_, i) =>
+      const digitPossibilities = this.possibilities.filter((_, i) =>
         segments.includes(i)
       );
 

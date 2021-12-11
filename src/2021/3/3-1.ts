@@ -6,18 +6,18 @@ interface Report {
 }
 
 export function statusReportPowerConsumption(data: string) {
-  let acc: Accumulator = buildAccumulator();
+  const acc: Accumulator = buildAccumulator();
 
-  let lines = data.split("\n");
-  var result = lines.reduce(reducer, acc);
-  let report = mapToReport(result, lines.length);
+  const lines = data.split("\n");
+  const result = lines.reduce(reducer, acc);
+  const report = mapToReport(result, lines.length);
 
   console.log(
     `[2021, 3-1] Power consumption is: ${report.epsilon * report.gamma}`
   );
 }
 
-let reducer = (accumulator: Accumulator, line: string): Accumulator => {
+const reducer = (accumulator: Accumulator, line: string): Accumulator => {
   if (line.length != accumulator.length) {
     throw new Error("Invalid input");
   }
@@ -32,17 +32,17 @@ let reducer = (accumulator: Accumulator, line: string): Accumulator => {
 
 function buildAccumulator(): Accumulator {
   const count = 12;
-  let acc: Accumulator = new Array<number>(count);
+  const acc: Accumulator = new Array<number>(count);
   for (let i = 0; i < acc.length; ++i) acc[i] = 0;
   return acc;
 }
 
 function mapToReport(acc: Accumulator, linesCount: number): Report {
-  let gamma: string = "";
-  let epsilon: string = "";
+  let gamma = "";
+  let epsilon = "";
 
   acc.forEach((v) => {
-    let oneIsMostFrequent = v > linesCount / 2;
+    const oneIsMostFrequent = v > linesCount / 2;
     gamma += oneIsMostFrequent ? "1" : "0";
     epsilon += oneIsMostFrequent ? "0" : "1";
   });

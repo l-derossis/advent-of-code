@@ -31,7 +31,7 @@ export function digitalSegments(data: string) {
   const stringDatasets = data.split("\n");
   const datasets: Dataset[] = [];
   stringDatasets.forEach((s) => {
-    let split = s.split(" | ");
+    const split = s.split(" | ");
 
     datasets.push({
       signals: split[0].split(" "),

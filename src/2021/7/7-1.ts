@@ -1,5 +1,5 @@
 export function sortCrabs(data: string) {
-  let crabs = data.split(",").map((c) => +c);
+  const crabs = data.split(",").map((c) => +c);
 
   const sorted = crabs.sort((a, b) => a - b);
   const middleValue = sorted[Math.round(sorted.length / 2)];

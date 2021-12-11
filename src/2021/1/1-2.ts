@@ -5,13 +5,13 @@ type Accumulator = {
 };
 
 export function depthIncreaseSlidingWindow(data: string) {
-  let reducer = (
+  const reducer = (
     previous: Accumulator,
     current: number,
     i: number,
     array: number[]
   ): Accumulator => {
-    let window =
+    const window =
       array[i + 1] && array[i + 2] ? current + array[i + 1] + array[i + 2] : 0;
 
     return {
@@ -21,7 +21,7 @@ export function depthIncreaseSlidingWindow(data: string) {
     };
   };
 
-  let count = data
+  const count = data
     .split("\n")
     .map((v) => +v)
     .reduce(reducer, {

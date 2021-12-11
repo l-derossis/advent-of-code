@@ -1,5 +1,5 @@
 export function lanternFishes(data: string) {
-  let fishes = parseData(data);
+  const fishes = parseData(data);
 
   console.log(`[2021, 6-1] Count after  80 days: ${getFishCount(fishes, 80)}`);
   console.log(`[2021, 6-2] Count after 256 days: ${getFishCount(fishes, 256)}`);
@@ -26,10 +26,11 @@ function getSortedFishes(fishes: number[]): number[] {
 }
 
 function passDay(sortedFishes: number[]): number[] {
-  var nextSortedFishes: number[] = [...sortedFishes];
-  let readyFishes = nextSortedFishes.shift();
-  nextSortedFishes.push(readyFishes!);
-  nextSortedFishes[6] += readyFishes!;
+  const nextSortedFishes: number[] = [...sortedFishes];
+
+  const readyFishes = nextSortedFishes.shift()!;
+  nextSortedFishes.push(readyFishes);
+  nextSortedFishes[6] += readyFishes;
 
   return nextSortedFishes;
 }

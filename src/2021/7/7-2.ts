@@ -1,6 +1,6 @@
 export function sortCrabsNonLinear(data: string) {
-  let crabs = data.split(",").map((c) => +c);
-  let mean = Math.round(crabs.reduce((p, c) => p + c) / crabs.length);
+  const crabs = data.split(",").map((c) => +c);
+  const mean = Math.round(crabs.reduce((p, c) => p + c) / crabs.length);
 
   // We know that the position for minimum consumption is going to be around the mean.
   // But we don't know if it's higher or lower. So we compute the mean, find in which

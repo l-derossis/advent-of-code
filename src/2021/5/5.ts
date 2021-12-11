@@ -19,21 +19,21 @@ class Floor {
 
   addVentLine(line: VentLine, useDiagonals: boolean) {
     if (line.x1 == line.x2) {
-      let origin = line.y1 < line.y2 ? line.y1 : line.y2;
-      let end = line.y1 > line.y2 ? line.y1 : line.y2;
+      const origin = line.y1 < line.y2 ? line.y1 : line.y2;
+      const end = line.y1 > line.y2 ? line.y1 : line.y2;
       for (let i = origin; i <= end; ++i) {
         this.grid[i][line.x1]++;
       }
     } else if (line.y1 == line.y2) {
-      let origin = line.x1 < line.x2 ? line.x1 : line.x2;
-      let end = line.x1 > line.x2 ? line.x1 : line.x2;
+      const origin = line.x1 < line.x2 ? line.x1 : line.x2;
+      const end = line.x1 > line.x2 ? line.x1 : line.x2;
       for (let i = origin; i <= end; ++i) {
         this.grid[line.y1][i]++;
       }
     } else if (useDiagonals) {
-      let distance = Math.abs(line.x1 - line.x2);
-      let right = line.x2 - line.x1 > 0;
-      let down = line.y2 - line.y1 > 0;
+      const distance = Math.abs(line.x1 - line.x2);
+      const right = line.x2 - line.x1 > 0;
+      const down = line.y2 - line.y1 > 0;
 
       for (let i = 0; i <= distance; ++i) {
         this.grid[down ? line.y1 + i : line.y1 - i][
@@ -70,16 +70,16 @@ export function hydrothermalVents(data: string) {
 }
 
 function getDangerCount(lines: VentLine[], includeDiagonals: boolean): number {
-  let floor = new Floor(1000);
+  const floor = new Floor(1000);
   lines.forEach((l) => floor.addVentLine(l, includeDiagonals));
   return floor.dangerCount();
 }
 
 function parseLines(data: string): VentLine[] {
-  var rows = data.split("\n");
+  const rows = data.split("\n");
 
   return rows.map((r) => {
-    let values = r.replace(" -> ", ",").split(",");
+    const values = r.replace(" -> ", ",").split(",");
     return {
       x1: +values[0],
       y1: +values[1],

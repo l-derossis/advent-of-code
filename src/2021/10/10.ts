@@ -23,7 +23,7 @@ function illegalScore(lines: string[]): number {
       p +
       (validity.firstIllegalChar == undefined
         ? 0
-        : score(validity.firstIllegalChar!, ClosingScoreType.Illegal))
+        : score(validity.firstIllegalChar, ClosingScoreType.Illegal))
     );
   }, 0);
 }
@@ -32,13 +32,13 @@ function incompleteScore(lines: string[]): number {
   const scores = lines.reduce((p: number[], c) => {
     const validity = checkLine([...c]);
     if (validity.missingClosing != undefined) {
-      p.push(incompleteClosingsScore(validity.missingClosing!));
+      p.push(incompleteClosingsScore(validity.missingClosing));
     }
 
     return p;
   }, []);
 
-  return scores.sort((a, b) => a - b).at(Math.floor(scores.length / 2))!;
+  return scores.sort((a, b) => a - b).at(Math.floor(scores.length / 2)) ?? -1;
 }
 
 function incompleteClosingsScore(closings: string[]): number {
@@ -52,11 +52,11 @@ function checkLine(line: string[]): LineValidity {
   const lineCopy = [...line];
 
   while (lineCopy.length > 0) {
-    const head = lineCopy.shift()!;
-    if (getClosing(head) != undefined) {
+    const head = lineCopy.shift();
+    if (head && getClosing(head) != undefined) {
       stack.push(head);
     } else {
-      if (getClosing(stack.pop()!) != head) {
+      if (getClosing(stack.pop() ?? "") != head) {
         return { valid: false, firstIllegalChar: head };
       }
     }
@@ -65,7 +65,7 @@ function checkLine(line: string[]): LineValidity {
   if (stack.length > 0) {
     return {
       valid: false,
-      missingClosing: stack.map((opening) => getClosing(opening)!),
+      missingClosing: stack.map((opening) => getClosing(opening) ?? ""),
     };
   }
 
