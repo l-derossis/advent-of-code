@@ -16,5 +16,5 @@ export function depthIncrease(data: string) {
     .map((v) => +v)
     .reduce(reducer, { previous: Number.MAX_VALUE, acc: 0 });
 
-  console.log(`Depth increase speed is ${count.acc}`);
+  console.log(`[2021, 1-1] Depth increase speed is ${count.acc}`);
 }

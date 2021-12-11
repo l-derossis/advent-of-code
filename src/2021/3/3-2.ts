@@ -7,7 +7,7 @@ interface GlobalAccumulator {
 export function statusReportLifeSupport(data: string) {
   const oxygen = readLifeReportValue(data, "oxygen");
   const co2 = readLifeReportValue(data, "co2");
-  console.log(`Life support rating is: ${oxygen * co2}`);
+  console.log(`[2021, 3-2] Life support rating is: ${oxygen * co2}`);
 }
 
 function readLifeReportValue(data: string, value: "oxygen" | "co2"): number {

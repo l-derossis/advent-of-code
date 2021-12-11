@@ -30,5 +30,5 @@ export function depthIncreaseSlidingWindow(data: string) {
       acc: 0,
     });
 
-  console.log(`Depth increase speed is ${count.acc}`);
+  console.log(`[2021, 1-2] Depth increase speed is ${count.acc}`);
 }

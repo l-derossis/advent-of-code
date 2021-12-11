@@ -2,7 +2,7 @@ export function sortCrabsNonLinear(data: string) {
   let crabs = data.split(",").map((c) => +c);
   let mean = Math.round(crabs.reduce((p, c) => p + c) / crabs.length);
 
-  // We know that the position for minimum consumption is going to be arounnd the mean.
+  // We know that the position for minimum consumption is going to be around the mean.
   // But we don't know if it's higher or lower. So we compute the mean, find in which
   // direction is the minimum value, and then compute every value until it starts going up.
 
@@ -21,7 +21,9 @@ export function sortCrabsNonLinear(data: string) {
     }
   }
 
-  console.log(`Minimum fuel for non linear crabs movement: ${minFuel}`);
+  console.log(
+    `[2021, 7-2] Minimum fuel for non linear crabs movement: ${minFuel}`
+  );
 }
 
 function getCrabsFuelForMeetingPoint(crabs: number[], position: number) {

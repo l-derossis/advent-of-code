@@ -39,11 +39,11 @@ export function digitalSegments(data: string) {
     });
   });
 
-  const totalKnownValues = datasets.reduce(
+  const totalKnownDigits = datasets.reduce(
     (p, c) =>
       p + c.digits.reduce((p, c) => p + (c.value != undefined ? 1 : 0), 0),
     0
   );
 
-  console.log(totalKnownValues);
+  console.log(`[2021, 8-1] Known digits (1, 4, 7, 8): ${totalKnownDigits}`);
 }

@@ -114,11 +114,13 @@ class HeightMap {
 export function lavaTubes(data: string) {
   const map = new HeightMap(data.split("\n").map((l) => [...l].map((c) => +c)));
   const sum = map.lowestPoints.reduce((p, c) => p + c.height + 1, 0);
-  console.log(`Sum of lowest points: ${sum}`);
+  console.log(`[2021, 9-1] Sum of lowest points: ${sum}`);
 
   const threeLargestBasinsSize = map.basins
     .sort((a, b) => b.length - a.length)
     .slice(0, 3)
     .reduce((p, c) => p * c.length, 1);
-  console.log(`Multiplied size of 3 largest basins: ${threeLargestBasinsSize}`);
+  console.log(
+    `[2021, 9-2] Multiplied size of 3 largest basins: ${threeLargestBasinsSize}`
+  );
 }

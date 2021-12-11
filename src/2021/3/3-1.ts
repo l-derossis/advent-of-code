@@ -10,12 +10,11 @@ export function statusReportPowerConsumption(data: string) {
 
   let lines = data.split("\n");
   var result = lines.reduce(reducer, acc);
-
-  console.log(result);
-
   let report = mapToReport(result, lines.length);
 
-  console.log(`Power consumption is: ${report.epsilon * report.gamma}`);
+  console.log(
+    `[2021, 3-1] Power consumption is: ${report.epsilon * report.gamma}`
+  );
 }
 
 let reducer = (accumulator: Accumulator, line: string): Accumulator => {
@@ -47,11 +46,6 @@ function mapToReport(acc: Accumulator, linesCount: number): Report {
     gamma += oneIsMostFrequent ? "1" : "0";
     epsilon += oneIsMostFrequent ? "0" : "1";
   });
-
-  console.log("gamma");
-  console.log(gamma);
-  console.log("epsilon");
-  console.log(epsilon);
 
   return {
     gamma: parseInt(gamma, 2),

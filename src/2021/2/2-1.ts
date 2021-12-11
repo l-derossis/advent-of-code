@@ -19,9 +19,7 @@ export function submarinePosition(data: string) {
     .split("\n")
     .map((l) => parseCommand(l))
     .reduce(move, { horizontal: 0, vertical: 0 });
-  console.log(`Horizontal position: ${result.horizontal}`);
-  console.log(`Vertical position: ${result.vertical}`);
-  console.log(`Product: ${result.horizontal * result.vertical}`);
+  console.log(`[2021, 2-1] Product: ${result.horizontal * result.vertical}`);
 }
 
 let parseCommand = (line: string): Command => {

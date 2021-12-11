@@ -14,7 +14,7 @@ export function digitalSegmentsFull(data: string) {
     );
   }, 0);
 
-  console.log(`Sum of all digits is: ${sum}`);
+  console.log(`[2021, 8-2] Sum of all digits is: ${sum}`);
 }
 
 type PossibilityRow = string[][];

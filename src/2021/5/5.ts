@@ -43,12 +43,6 @@ class Floor {
     }
   }
 
-  display() {
-    this.grid.forEach((r) => {
-      console.log(r.reduce((p, c) => p + " " + c.toString(), ""));
-    });
-  }
-
   dangerCount(): number {
     return this.grid.reduce(
       (p, c) => p + c.reduce((pr, cu) => pr + (cu > 1 ? 1 : 0), 0),
@@ -61,11 +55,17 @@ export function hydrothermalVents(data: string) {
   const lines = parseLines(data);
 
   console.log(
-    `Danger zones count (no diagonal vents): ${getDangerCount(lines, false)}`
+    `[2021, 5-1] Danger zones count (no diagonal vents): ${getDangerCount(
+      lines,
+      false
+    )}`
   );
 
   console.log(
-    `Danger zones count (diagonal vents): ${getDangerCount(lines, true)}`
+    `[2021, 5-2] Danger zones count (diagonal vents): ${getDangerCount(
+      lines,
+      true
+    )}`
   );
 }
 

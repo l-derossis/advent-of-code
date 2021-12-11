@@ -1,8 +1,8 @@
 export function syntaxScoring(data: string) {
   const lines = data.split("\n");
 
-  console.log(`Corrupted lines score: ${illegalScore(lines)}`);
-  console.log(`Incomplete lines score: ${incompleteScore(lines)}`);
+  console.log(`[2021, 10-1] Corrupted lines score: ${illegalScore(lines)}`);
+  console.log(`[2021, 10-2] Incomplete lines score: ${incompleteScore(lines)}`);
 }
 
 interface LineValidity {

@@ -6,5 +6,5 @@ export function sortCrabs(data: string) {
 
   const fuel = crabs.reduce((p, c) => p + Math.abs(c - middleValue), 0);
 
-  console.log(`Minimum fuel for linear crabs movement: ${fuel}`);
+  console.log(`[2021, 7-1] Minimum fuel for linear crabs movement: ${fuel}`);
 }

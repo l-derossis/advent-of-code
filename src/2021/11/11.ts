@@ -100,14 +100,18 @@ class OctopusMap {
 export function dumboOctopus(data: string) {
   let map = new OctopusMap(loadData(data));
   const count = 100;
-  console.log(`Flashes after ${count} steps: ${map.runSteps(100)}`);
+  console.log(
+    `[2021, 11-1] Flashes after ${count} steps: ${map.runSteps(100)}`
+  );
 
   map = new OctopusMap(loadData(data));
   let i = 0;
   do {
     ++i;
   } while (map.step() != 100);
-  console.log(`Step at which all octopuses flash simultaneously: ${i}`);
+  console.log(
+    `[2021, 11-2] Step at which all octopuses flash simultaneously: ${i}`
+  );
 }
 
 function loadData(data: string): number[][] {

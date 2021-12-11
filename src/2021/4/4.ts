@@ -78,12 +78,12 @@ export function bingo(data: string) {
   const lastWinningScore = findLastWinningBoard(boards, inputs);
 
   console.log(
-    `First winning board score is: ${firstWinningScore?.board.score(
+    `[2021, 4-1] First winning board score is: ${firstWinningScore?.board.score(
       firstWinningScore.usedInputs
     )}`
   );
   console.log(
-    `Last winning board score is: ${lastWinningScore?.board.score(
+    `[2021, 4-2] Last winning board score is: ${lastWinningScore?.board.score(
       lastWinningScore.usedInputs
     )}`
   );
