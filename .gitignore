@@ -13,9 +13,6 @@ logs
 results
 tmp
 
-# Build
-public/css/main.css
-
 # Coverage reports
 coverage
 
@@ -26,9 +23,6 @@ coverage
 node_modules
 bower_components
 
-# Editors
-.idea
-*.iml
 
 # OS metadata
 .DS_Store
@@ -37,5 +31,5 @@ Thumbs.db
 # Ignore built ts files
 dist/**/*
 
-# ignore yarn.lock
-yarn.lock
+## Test input files
+inputs/**/test.txt
