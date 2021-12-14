@@ -20,6 +20,7 @@ import { notQuiteLisp } from "./2015/1";
 import { passagePathing } from "./2021/12/12";
 import { iWasToldThereWouldBeNoMath } from "./2015/2";
 import { transparentOrigami } from "./2021/13/13";
+import { perfectlySphericalHousesInAVacuum } from "./2015/3";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -34,6 +35,7 @@ function execute(func: (arg: string) => void, inputFile: string) {
 // 2015
 //execute(notQuiteLisp, "inputs/2015/1.txt");
 //execute(iWasToldThereWouldBeNoMath, "inputs/2015/2.txt");
+execute(perfectlySphericalHousesInAVacuum, "inputs/2015/3.txt");
 
 // 2021
 //execute(depthIncrease, "inputs/2021/1.txt");
@@ -53,4 +55,4 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(syntaxScoring, "inputs/2021/10.txt");
 //execute(dumboOctopus, "inputs/2021/11.txt");
 //execute(passagePathing, "inputs/2021/12.txt");
-execute(transparentOrigami, "inputs/2021/13.txt");
+//execute(transparentOrigami, "inputs/2021/13.txt");
