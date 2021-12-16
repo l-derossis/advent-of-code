@@ -61,7 +61,7 @@ const move = (
   sheet: Sheet,
   axis: Axis,
   distance: number,
-  points: Coordinates[]
+  points: readonly Coordinates[]
 ): Sheet => {
   return sheet
     .filter((point) => points.find((p) => equals(point, p)) == undefined)
