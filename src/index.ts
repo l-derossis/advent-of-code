@@ -22,6 +22,7 @@ import { iWasToldThereWouldBeNoMath } from "./2015/2";
 import { transparentOrigami } from "./2021/13/13";
 import { perfectlySphericalHousesInAVacuum } from "./2015/3";
 import { extendedPolymerization } from "./2021/14/14";
+import { chiton } from "./2021/15/15";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -57,4 +58,5 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(dumboOctopus, "inputs/2021/11.txt");
 //execute(passagePathing, "inputs/2021/12.txt");
 //execute(transparentOrigami, "inputs/2021/13.txt");
-execute(extendedPolymerization, "inputs/2021/14.txt");
+//execute(extendedPolymerization, "inputs/2021/14.txt");
+//execute(chiton, "inputs/2021/15.txt"); // This one takes a lot of time to process
