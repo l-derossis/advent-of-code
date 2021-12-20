@@ -23,6 +23,7 @@ import { transparentOrigami } from "./2021/13/13";
 import { perfectlySphericalHousesInAVacuum } from "./2015/3";
 import { extendedPolymerization } from "./2021/14/14";
 import { chiton } from "./2021/15/15";
+import { packetDecoder } from "./2021/16/16";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -60,3 +61,4 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(transparentOrigami, "inputs/2021/13.txt");
 //execute(extendedPolymerization, "inputs/2021/14.txt");
 //execute(chiton, "inputs/2021/15.txt"); // This one takes a lot of time to process
+execute(packetDecoder, "inputs/2021/16.txt"); // This one takes a lot of time to process
