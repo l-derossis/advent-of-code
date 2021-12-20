@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/node": "^16.11.11",
     "@types/ramda": "^0.27.60",
-    "ramda": "^0.27.1"
+    "ramda": "^0.27.1",
+    "ts-md5": "^1.2.10"
   }
 }

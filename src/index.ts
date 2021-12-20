@@ -24,6 +24,7 @@ import { perfectlySphericalHousesInAVacuum } from "./2015/3";
 import { extendedPolymerization } from "./2021/14/14";
 import { chiton } from "./2021/15/15";
 import { packetDecoder } from "./2021/16/16";
+import { theIdealStockingStuffer } from "./2015/4";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -39,6 +40,7 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(notQuiteLisp, "inputs/2015/1.txt");
 //execute(iWasToldThereWouldBeNoMath, "inputs/2015/2.txt");
 //execute(perfectlySphericalHousesInAVacuum, "inputs/2015/3.txt");
+//execute(theIdealStockingStuffer, "inputs/2015/4.txt"); // Some bruteforce is going on here, it takes some time.
 
 // 2021
 //execute(depthIncrease, "inputs/2021/1.txt");
@@ -61,4 +63,4 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(transparentOrigami, "inputs/2021/13.txt");
 //execute(extendedPolymerization, "inputs/2021/14.txt");
 //execute(chiton, "inputs/2021/15.txt"); // This one takes a lot of time to process
-execute(packetDecoder, "inputs/2021/16.txt"); // This one takes a lot of time to process
+//execute(packetDecoder, "inputs/2021/16.txt"); // This one takes a lot of time to process
