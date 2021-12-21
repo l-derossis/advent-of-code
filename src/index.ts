@@ -1,30 +1,31 @@
 import * as fs from "fs";
 
-import { depthIncrease } from "./2021/1/1-1";
-import { depthIncreaseSlidingWindow } from "./2021/1/1-2";
-import { submarinePosition } from "./2021/2/2-1";
-import { submarinePositionWithAim } from "./2021/2/2-2";
-import { statusReportPowerConsumption } from "./2021/3/3-1";
-import { statusReportLifeSupport } from "./2021/3/3-2";
-import { bingo } from "./2021/4/4";
-import { hydrothermalVents } from "./2021/5/5";
-import { lanternFishes } from "./2021/6/6";
-import { sortCrabs } from "./2021/7/7-1";
-import { sortCrabsNonLinear } from "./2021/7/7-2";
-import { digitalSegments } from "./2021/8/8-1";
-import { digitalSegmentsFull } from "./2021/8/8-2";
-import { lavaTubes } from "./2021/9/9";
-import { syntaxScoring } from "./2021/10/10";
-import { dumboOctopus } from "./2021/11/11";
+import { depthIncrease } from "./2021/1-1";
+import { depthIncreaseSlidingWindow } from "./2021/1-2";
+import { submarinePosition } from "./2021/2-1";
+import { submarinePositionWithAim } from "./2021/2-2";
+import { statusReportPowerConsumption } from "./2021/3-1";
+import { statusReportLifeSupport } from "./2021/3-2";
+import { bingo } from "./2021/4";
+import { hydrothermalVents } from "./2021/5";
+import { lanternFishes } from "./2021/6";
+import { sortCrabs } from "./2021/7-1";
+import { sortCrabsNonLinear } from "./2021/7-2";
+import { digitalSegments } from "./2021/8-1";
+import { digitalSegmentsFull } from "./2021/8-2";
+import { lavaTubes } from "./2021/9";
+import { syntaxScoring } from "./2021/10";
+import { dumboOctopus } from "./2021/11";
 import { notQuiteLisp } from "./2015/1";
-import { passagePathing } from "./2021/12/12";
+import { passagePathing } from "./2021/12";
 import { iWasToldThereWouldBeNoMath } from "./2015/2";
-import { transparentOrigami } from "./2021/13/13";
+import { transparentOrigami } from "./2021/13";
 import { perfectlySphericalHousesInAVacuum } from "./2015/3";
-import { extendedPolymerization } from "./2021/14/14";
-import { chiton } from "./2021/15/15";
-import { packetDecoder } from "./2021/16/16";
+import { extendedPolymerization } from "./2021/14";
+import { chiton } from "./2021/15";
+import { packetDecoder } from "./2021/16";
 import { theIdealStockingStuffer } from "./2015/4";
+import { trickShot } from "./2021/17";
 
 function execute(func: (arg: string) => void, inputFile: string) {
   fs.readFile(inputFile, "utf8", (err, data) => {
@@ -63,4 +64,5 @@ function execute(func: (arg: string) => void, inputFile: string) {
 //execute(transparentOrigami, "inputs/2021/13.txt");
 //execute(extendedPolymerization, "inputs/2021/14.txt");
 //execute(chiton, "inputs/2021/15.txt"); // This one takes a lot of time to process
-//execute(packetDecoder, "inputs/2021/16.txt"); // This one takes a lot of time to process
+//execute(packetDecoder, "inputs/2021/16.txt");
+execute(trickShot, "inputs/2021/17.txt");

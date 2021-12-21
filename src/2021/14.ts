@@ -21,7 +21,7 @@ export function extendedPolymerization(data: string) {
   const getResult = (limit: number) => {
     const pairs = explode(template);
     const polymerizedPairs = range(0, limit).reduce(
-      (p: PairRegistry, _) => fillPairs(insertions, p),
+      (p: PairRegistry) => fillPairs(insertions, p),
       pairs
     );
 
